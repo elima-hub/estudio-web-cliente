@@ -14,7 +14,7 @@ function agregarPedido(){
         return;
     }
 
-    if (validarCantidad(cantidad)){
+    if (cantidadInvalida(cantidad)){
         alert("El contenido de 'Cantidad' es inválido");
         return;
     }
@@ -23,12 +23,18 @@ function agregarPedido(){
     fila.insertCell().textContent = nombre;
     fila.insertCell().textContent = plato;
     fila.insertCell().textContent = cantidad;
+
+    inputNombre.value = "";
+    inputCantidad.value = "1";
+    inputNombre.focus();
 }
 
-function validarCantidad(cantidad){
-    if (!Number.isInteger(cantidad) || Number.isNaN(cantidad) || cantidad <= 0){
+function cantidadInvalida(cantidad){
+    if (!Number.isInteger(cantidad) || cantidad <= 0){
         return true;
     } else {
         return false;
     }
 }
+
+btnAgregar.addEventListener("click", agregarPedido);
