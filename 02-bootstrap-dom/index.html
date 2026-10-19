@@ -28,8 +28,22 @@
                         <label for="cantidad" class="form-label">Cantidad</label>
                         <input id="cantidad" min="1" value="1" type="number" class="form-control">
                     </div>
-                    <button id="btn-agregar" type="button" class="btn btn-primary">Agregar</button>
+                    <button id="btn-agregar" type="button" class="btn btn-primary col-md-2">Agregar</button>
                 </form>
+
+                <table class="table table-striped mt-4">
+                    <thead>
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Plato</th>
+                            <th>Cant.</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-pedidos">
+                        
+                    </tbody>
+                </table>
+
             </section>
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
