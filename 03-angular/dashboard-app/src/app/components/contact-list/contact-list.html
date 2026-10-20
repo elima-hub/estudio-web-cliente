@@ -1,1 +1,14 @@
-<p>contact-list works!</p>
+<table class="tablet table-striped table-sm">
+    <thead>
+        <th class="col">#</th>
+        <th class="col">Nombre</th>
+        <th class="col">Email</th>
+    </thead>
+    <tbody>
+        @for (contact of contacts; track contact.id){
+            <app-contact-row [contact]="contact"></app-contact-row>
+        } @empty{
+            <p>No hay platos</p>
+        }
+    </tbody>
+</table>
