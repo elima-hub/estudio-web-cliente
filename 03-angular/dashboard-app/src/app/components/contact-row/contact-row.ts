@@ -3,7 +3,7 @@ import { input } from '@angular/core';
 import { Contact } from '../../models/contact';
 
 @Component({
-  selector: 'app-contact-row',
+  selector: '[app-contact-row]',
   imports: [],
   templateUrl: './contact-row.html',
   styleUrl: './contact-row.css',

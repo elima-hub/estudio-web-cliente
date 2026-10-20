@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { ContactRow } from '../contact-row/contact-row';
 import { Contact } from '../../models/contact';
-import { App } from '../../app';
 
 @Component({
   selector: 'app-contact-list',
-  imports: [ContactRow, App],
+  imports: [ContactRow],
   templateUrl: './contact-list.html',
   styleUrl: './contact-list.css',
 })
